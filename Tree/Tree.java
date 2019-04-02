@@ -35,6 +35,7 @@ public class Tree {
 				insertNode(val, root.left);
 			}
 		}
+		
 		else
 		{
 			if(root.right == null)
@@ -45,7 +46,7 @@ public class Tree {
 			}
 			else
 			{
-				insertNode(val, root.left);
+				insertNode(val, root.right);
 			}
 		}
 		
@@ -57,10 +58,11 @@ public class Tree {
 	public void keyPreorder()
 	{
 		preOrder(root); 
+		
 	}
 	public void preOrder(Node root1)
 	{
-		System.out.println(root1);
+		System.out.println(root1.value);
 		if(root1.left != null)
 		{
 			preOrder(root1.left);
