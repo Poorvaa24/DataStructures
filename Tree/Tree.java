@@ -8,6 +8,8 @@ public class Tree {
 		root = null;
 	}
 
+	
+	// Constructing Binary Search Tree 
 	public void insertKey(int value)
 	{
 		root = insertNode(value,root);
@@ -55,8 +57,10 @@ public class Tree {
 		
 	}
 	
+	// Preorder traversal of a tree 
 	public void keyPreorder()
 	{
+		System.out.println("Preoder of tree is: ");
 		preOrder(root); 
 		
 	}
@@ -73,4 +77,48 @@ public class Tree {
 		}
 		
 	}
+	
+	// Inorder traversal of a tree 
+	
+	public void keyInOrder()
+	{
+		System.out.println("Inoder of tree is: ");
+		inOrder(root);
+	}
+	public void inOrder(Node root)
+	{
+		if(root.left != null)
+		{
+			inOrder(root.left);
+		}
+		
+		if(root.right != null)
+		{
+			inOrder(root.right);
+		}
+		
+		System.out.println(root.value);
+	}
+	public void keyPostOrder()
+	{
+		System.out.println("PostOrder of tree is: ");
+		postOrder(root);
+	}
+	
+	// Postorder traversal of a tree 
+	
+	public void postOrder(Node root)
+	{
+		if(root.left != null)
+		{
+			postOrder(root.left);
+		}
+		System.out.println(root.value);
+		
+		if(root.right != null)
+		{
+			postOrder(root.right);
+		}
+	}
+	
 }

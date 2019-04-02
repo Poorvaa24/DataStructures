@@ -5,11 +5,13 @@ public class MainEntry {
 		
 		
 		Tree t1 = new Tree();
-		t1.insertKey(12);
-		t1.insertKey(23);
-		t1.insertKey(44);
+		t1.insertKey(4);
+		t1.insertKey(2);
+		t1.insertKey(6);
 		
 		t1.keyPreorder();
+		t1.keyInOrder();
+		t1.keyPostOrder();
 
 	}
 
